@@ -1,8 +1,11 @@
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as m, AnimatePresence } from 'framer-motion';
 import { Plus, Trash2, Zap, Sparkles, RefreshCw, X, Dice5 } from 'lucide-react';
 import { useLanguage } from '../App';
+
+// Fixed motion type errors by casting to any
+const motion = m as any;
 
 const PickPage: React.FC = () => {
   const { t, lang } = useLanguage();

@@ -1,10 +1,13 @@
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as m, AnimatePresence } from 'framer-motion';
 import { Plus, Trash2, Search, UserPlus, Star, X, Users } from 'lucide-react';
 import { Member, Role } from '../types';
 import { ROLE_ICONS, INITIAL_ROLES } from '../constants';
 import { useLanguage } from '../App';
+
+// Fixed motion type errors by casting to any
+const motion = m as any;
 
 interface MembersPageProps {
   members: Member[];

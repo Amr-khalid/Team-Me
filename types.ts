@@ -18,8 +18,7 @@ export interface Team {
 export enum GenerationMode {
   RANDOM = 'RANDOM',
   BALANCED = 'BALANCED',
-  LEADER = 'LEADER',
-  AI_SMART = 'AI_SMART'
+  LEADER = 'LEADER'
 }
 
 export interface Addons {

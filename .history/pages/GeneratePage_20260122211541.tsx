@@ -74,13 +74,8 @@ const GeneratePage: React.FC<{ members: Member[] }> = ({ members }) => {
   const toggleAddon = (key: keyof Addons) => {
     setAddons(prev => ({ ...prev, [key]: !prev[key] }));
   };
-setTimeout(() => {
-    if (members.length === 0) { 
-    window.location.href = '#/members';
-    toast.error("You need to add members before generating teams.");
-  }
 
-}, 1000);
+  if (members.length === 0) {
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 h-full ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
       <div className="lg:col-span-4 space-y-6">

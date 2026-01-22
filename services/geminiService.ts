@@ -2,12 +2,13 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Member, Team } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const generateSmartTeams = async (
   members: Member[],
   numTeams: number
 ): Promise<Team[]> => {
+  // Initialize GoogleGenAI inside the function to ensure it uses the latest process.env.API_KEY
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+
   const prompt = `
     Act as a professional eSports coach and team manager. 
     Balance the following ${members.length} members into ${numTeams} competitive teams.

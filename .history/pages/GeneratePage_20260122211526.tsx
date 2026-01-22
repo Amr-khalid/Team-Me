@@ -5,7 +5,7 @@ import { RefreshCcw, LayoutGrid, Timer, Trophy, BarChart2, Volume2, Users } from
 import { Member, Team, GenerationMode, Addons } from '../types';
 import { ROLE_ICONS } from '../constants';
 import { useLanguage } from '../App';
-import toast from 'react-hot-toast';
+import toast
 
 // Fixed motion type errors by casting to any
 const motion = m as any;
@@ -74,13 +74,7 @@ const GeneratePage: React.FC<{ members: Member[] }> = ({ members }) => {
   const toggleAddon = (key: keyof Addons) => {
     setAddons(prev => ({ ...prev, [key]: !prev[key] }));
   };
-setTimeout(() => {
-    if (members.length === 0) { 
-    window.location.href = '#/members';
-    toast.error("You need to add members before generating teams.");
-  }
 
-}, 1000);
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 h-full ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
       <div className="lg:col-span-4 space-y-6">

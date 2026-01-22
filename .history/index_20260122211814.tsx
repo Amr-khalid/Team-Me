@@ -13,6 +13,6 @@ root.render(
   <React.StrictMode>
     
     <App />
-    <Toaster position="bottom-right" />
+    <Toaster position='t'/>
   </React.StrictMode>,
 );

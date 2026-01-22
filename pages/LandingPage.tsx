@@ -1,9 +1,12 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Target, Cpu } from 'lucide-react';
 import { useLanguage } from '../App';
+
+// Fixed motion type errors by casting to any
+const motion = m as any;
 
 const FeatureCard = ({ icon, title, desc }: { icon: React.ReactNode, title: string, desc: string }) => {
   const { lang } = useLanguage();

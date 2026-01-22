@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as m, AnimatePresence } from 'framer-motion';
 import { Users, LayoutDashboard, Settings, Info, Menu, X, Github, Target, Languages } from 'lucide-react';
 import LandingPage from './pages/LandingPage';
 import MembersPage from './pages/MembersPage';
@@ -9,6 +9,9 @@ import GeneratePage from './pages/GeneratePage';
 import PickPage from './pages/PickPage';
 import { Member } from './types';
 import { TRANSLATIONS } from './constants';
+
+// Fixed motion type errors by casting to any
+const motion = m as any;
 
 type Language = 'ar' | 'en';
 interface LanguageContextType {
@@ -45,7 +48,7 @@ const Navbar = () => {
             <span className="text-white font-black -rotate-45 group-hover:-rotate-90 transition-transform duration-500">TF</span>
           </div>
           <span className="font-orbitron font-black text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-            TEAM ME
+            TEAMFORGE
           </span>
         </Link>
 
