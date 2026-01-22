@@ -45,10 +45,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-cyan-400 rounded-lg flex items-center justify-center rotate-45 group-hover:rotate-90 transition-transform duration-500 shadow-[0_0_20px_rgba(188,19,254,0.5)]">
-            <span className="text-white font-black -rotate-45 group-hover:-rotate-90 transition-transform duration-500">TF</span>
+            2lassName="text-white font-black -rotate-45 group-hover:-rotate-90 transition-transform duration-500">TF</span>
           </div>
           <span className="font-orbitron font-black text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-            TEAM ME
+            TEAMFORGE
           </span>
         </Link>
 

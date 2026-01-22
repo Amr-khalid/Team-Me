@@ -48,7 +48,7 @@ const Navbar = () => {
             <span className="text-white font-black -rotate-45 group-hover:-rotate-90 transition-transform duration-500">TF</span>
           </div>
           <span className="font-orbitron font-black text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-            TEAM ME
+            TEAM 
           </span>
         </Link>
 
